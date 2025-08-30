@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    width: 200px;
+    background-color: cadetblue;
+    border: 1px solid beige;
+
+}
+
+
+
+#parent-container{
+  display: flex;
+  height: 50vh;
+  background-color: beige;
+  align-items: center;
+  flex-wrap: wrap;
+  /* align-content: center; */
+}
+
+
+#item-3{
+    order: 1;
+}
+#item-7{
+    align-self: flex-end;
+    order: 2;
+}

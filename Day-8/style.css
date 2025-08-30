@@ -1,0 +1,171 @@
+/* input{
+    padding: 10px;
+    font-size: 30px;
+    outline: none;
+}
+
+input:focus{
+    border: 1px solid red;
+} */
+
+/* #container{
+    width: 300px;
+    height: 300px;
+    background-color: cadetblue;
+} */
+
+#container:hover{
+    /* width: 310px;
+    height: 310px; */
+    /* background-color: bisque;
+    border-radius: 50%; */
+    /* transition: 2s all ease-in-out; */
+}
+
+/* a{
+    font-size: 30px;
+}
+
+a:active{
+    color: yellow;
+}
+
+button{
+    padding: 10px;
+    font-size: 30px;
+    background-color: transparent;
+    border: 2px solid orange;
+    color: orange;
+}
+
+button:hover{
+    background-color: orange;
+    color: white;
+} */
+
+/* a{
+    font-size: 30px;
+}
+
+a:visited{
+    color: green;
+} */
+
+/* link --> visited --> hover --> active */
+
+/* a{
+    font-size: 30px;
+}
+a:link{
+    color:brown;
+}
+a:visited{
+    color:green;
+}
+a:hover{
+    color:yellow;
+}
+a:active{
+    color:aqua;
+} */
+
+/* .para:first-child{
+    color: brown;
+} */
+
+/* li:nth-child(2n){
+    background-color: brown;
+} */
+
+/* an+b */
+
+/* empty */
+/* div:empty{
+    width: 100px;
+    height: 100px;
+    background-color: green;
+}
+
+td:empty{
+    background-color: gray;
+}
+
+tr:nth-child(2n+1){
+    background-color: lightblue;
+} */
+/* 
+input{
+    font-size: 30px;
+    padding: 10px;
+    color: brown;
+}
+
+input::placeholder{
+    color: brown;
+}
+
+::selection{
+    background-color: black;
+    color: yellow;
+} */
+
+/* p::first-letter{
+    font-size: 30px;
+    color: red;
+} */
+/* p::first-line{
+    font-size: 30px;
+    color: red;
+} */
+
+/* p{
+    transition: 1s ease;
+} */
+
+
+
+/* p:hover::before{
+    content: "Hello World";
+    background-color: red;
+    border: 1px solid red;
+    margin-right: 3px;
+    width: 200px;
+    display: inline-block;
+}
+p::after{
+    content: "";
+    background-color: red;
+    border: 1px solid red;
+    margin-left: 3px;
+    width: 200px;
+    display: inline-block;
+} */
+/* 
+#container{
+    
+    height: 300px;
+    background-color: cadetblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+#box{
+    width: 100px;
+    height: 100px;
+    background-color: bisque;
+    position: absolute;
+    top: 0;
+    left: 0;
+} */
+
+/* static , absolute , relative , fixed , sticky */
+
+#container{
+    width: 97vw;
+    height: 100px;
+    background-color: rgba(95, 158, 160, 0.524);
+    position: sticky;
+    top: 0;
+}
