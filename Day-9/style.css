@@ -105,13 +105,13 @@ transform-origin: 150px 150px; */
 
 /* variables */
 
-*{
+/* *{
     margin: 0;
     padding: 0;
-}
+} */
 
 /* global ,   local */
-
+/* 
 :root{
  --primary-background-color : lightcyan;
  --secondary-background-color :    rgb(240, 255, 255);
@@ -163,4 +163,15 @@ body{
 .blog-para{
     color: var(--secondary-text-color);
 }
+ */
 
+ #container{
+    width: 400px;
+    height: 400px;
+    /* background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpBcPcYBb7TsYE9YM4BR1FkJov9qhJdCSklA&s");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain; */
+    background-color: lightblue;
+    overflow: auto;
+ }
