@@ -121,3 +121,23 @@ a:hover{
     /* border-bottom: 1px solid green; */
     
 }
+
+#hemberger-menu-icon{
+    width: 50%;
+
+}
+
+#hemberger{
+    width: 10%;
+    display: none;
+}
+
+@media screen and (max-width : 600px) {
+    #hemberger{
+        display: block;
+    }
+
+    #menu-items,#search-input{
+        display: none;
+    }
+}
