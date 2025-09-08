@@ -180,13 +180,13 @@
 
 // console.log(obj[keyVariable]);
 
-function sqArr(arr){
-    let sqauredArr = [];
-    for(let i = 0 ; i < arr.length ; i++){
-        sqauredArr[i] = arr[i]**2;
-    }
-    return sqauredArr;
-}
+// function sqArr(arr){
+//     let sqauredArr = [];
+//     for(let i = 0 ; i < arr.length ; i++){
+//         sqauredArr[i] = arr[i]**2;
+//     }
+//     return sqauredArr;
+// }
 
-let result = sqArr([10,20,30,40,50]);
-console.log(result);
+// let result = sqArr([10,20,30,40,50]);
+// console.log(result);
