@@ -265,11 +265,32 @@ let data = [
 //     document.getElementById("container").style.background =   "cadetblue";
 // })
 
-document.getElementById("button").addEventListener("click",function(){
-    let tBody =   document.getElementById("table-body");
-    data.forEach((item)=>{
-        let tRow = document.createElement("tr");
-        tRow.innerHTML = `<td>${item.id}</td><td>${item.name}</td><td>${item.category}</td><td>${item.brand}</td><td>${item.price}</td><td>${item.discount}</td><td>${item.inStock}</td><td>${item.rating}</td><td>${item.reviews}</td><td>${item.createdAt}</td>`;
-        tBody.appendChild(tRow);
-    })
+// document.getElementById("button").addEventListener("click",function(){
+//     let tBody =   document.getElementById("table-body");
+//     data.forEach((item)=>{
+//         let tRow = document.createElement("tr");
+//         tRow.innerHTML = `<td>${item.id}</td><td>${item.name}</td><td>${item.category}</td><td>${item.brand}</td><td>${item.price}</td><td>${item.discount}</td><td>${item.inStock}</td><td>${item.rating}</td><td>${item.reviews}</td><td>${item.createdAt}</td>`;
+//         tBody.appendChild(tRow);
+//     })
+// })
+
+// document.getElementById("input").addEventListener("keypress",function(e){
+//     console.log(e);
+//     console.log("Key Press Event");
+// })
+
+let obj = {
+    name : "shubham",
+    email : "shubham@gmail.com",
+    contact : "123456789",
+    password : "98765432"
+}
+
+document.getElementById("signup-form").addEventListener("submit",function(e){
+    e.preventDefault();
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+    let contact = document.getElementById("contact").value;
+    let password = document.getElementById("password").value;
+    console.log({name , email , contact , password})
 })
