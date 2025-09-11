@@ -279,18 +279,40 @@ let data = [
 //     console.log("Key Press Event");
 // })
 
-let obj = {
-    name : "shubham",
-    email : "shubham@gmail.com",
-    contact : "123456789",
-    password : "98765432"
+// let obj = {
+//     name : "shubham",
+//     email : "shubham@gmail.com",
+//     contact : "123456789",
+//     password : "98765432"
+// }
+
+// document.getElementById("signup-form").addEventListener("submit",function(e){
+//     e.preventDefault();
+//     let name = document.getElementById("name").value;
+//     let email = document.getElementById("email").value;
+//     let contact = document.getElementById("contact").value;
+//     let password = document.getElementById("password").value;
+//     console.log({name , email , contact , password})
+// })
+
+let formData = {};
+
+function handleChange(e){
+    // console.log(e.target.name);
+    // console.log(e.target.value);
+
+    formData = {...formData , [e.target.name] : e.target.value};
+    console.log(formData)
 }
 
-document.getElementById("signup-form").addEventListener("submit",function(e){
-    e.preventDefault();
-    let name = document.getElementById("name").value;
-    let email = document.getElementById("email").value;
-    let contact = document.getElementById("contact").value;
-    let password = document.getElementById("password").value;
-    console.log({name , email , contact , password})
+// document.getElementById("name").addEventListener("input",handleChange);
+
+// document.getElementById("email").addEventListener("input",handleChange);
+
+// document.getElementById("contact").addEventListener("input",handleChange);
+
+// document.getElementById("password").addEventListener("input",handleChange);
+
+document.querySelectorAll(".input").forEach((item)=>{
+    item.addEventListener("input",handleChange);
 })
