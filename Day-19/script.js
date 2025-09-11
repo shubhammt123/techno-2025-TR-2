@@ -313,6 +313,41 @@ function handleChange(e){
 
 // document.getElementById("password").addEventListener("input",handleChange);
 
-document.querySelectorAll(".input").forEach((item)=>{
-    item.addEventListener("input",handleChange);
-})
+// document.querySelectorAll(".input").forEach((item)=>{
+//     item.addEventListener("input",handleChange);
+// })
+
+// Async Js
+
+// Timer Functions
+// setTimeOut
+// setInterval
+// clearTimeOut
+// clearInterval
+
+// setTimeout(()=>{
+//     console.log("Hello world");
+// },5000);
+
+// let interval = setInterval(()=>{
+//     console.log("Hello  world");
+// },2000)
+
+
+// setTimeout(()=>{
+//     clearInterval(interval);
+// },10000);
+
+console.log("First Step");
+
+console.log("Second Step");
+
+setTimeout(()=>{
+    console.log("Third Step");
+},2000);
+
+console.log("Fourth Step");
+
+setTimeout(()=>{
+    console.log("Fifth Step");
+},1000);
