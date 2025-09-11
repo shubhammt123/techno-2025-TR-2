@@ -1,0 +1,23 @@
+#container{
+    width: 300px;
+    height: 300px;
+    background-color: blueviolet;
+    transition: 1s ease-in-out;
+}
+
+table{
+    width: 100%;
+    text-align: center;
+}
+
+thead{
+    background-color: lightblue;
+}
+
+tr:nth-child(2n){
+    background-color: rgb(193, 193, 193);
+}
+
+th ,td{
+    padding: 10px  0;
+}
