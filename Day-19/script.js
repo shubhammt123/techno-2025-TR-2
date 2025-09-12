@@ -295,15 +295,15 @@ let data = [
 //     console.log({name , email , contact , password})
 // })
 
-let formData = {};
+// let formData = {};
 
-function handleChange(e){
-    // console.log(e.target.name);
-    // console.log(e.target.value);
+// function handleChange(e){
+//     // console.log(e.target.name);
+//     // console.log(e.target.value);
 
-    formData = {...formData , [e.target.name] : e.target.value};
-    console.log(formData)
-}
+//     formData = {...formData , [e.target.name] : e.target.value};
+//     console.log(formData)
+// }
 
 // document.getElementById("name").addEventListener("input",handleChange);
 
@@ -338,16 +338,16 @@ function handleChange(e){
 //     clearInterval(interval);
 // },10000);
 
-console.log("First Step");
+// console.log("First Step");
 
-console.log("Second Step");
+// console.log("Second Step");
 
-setTimeout(()=>{
-    console.log("Third Step");
-},2000);
+// setTimeout(()=>{
+//     console.log("Third Step");
+// },2000);
 
-console.log("Fourth Step");
+// console.log("Fourth Step");
 
-setTimeout(()=>{
-    console.log("Fifth Step");
-},1000);
+// setTimeout(()=>{
+//     console.log("Fifth Step");
+// },1000);
