@@ -144,36 +144,36 @@
 
 // Private properties
 
-class Account{
-    #balance = 0;
-    constructor(name , initialBalance){
-        this.name = name;
-        this.#balance = initialBalance;
-    }
+// class Account{
+//     #balance = 0;
+//     constructor(name , initialBalance){
+//         this.name = name;
+//         this.#balance = initialBalance;
+//     }
 
-    // showBalance(){
-    //     console.log(this.#balance);
-    // }
+//     // showBalance(){
+//     //     console.log(this.#balance);
+//     // }
 
-    // updateBalance(amount){
-    //     this.#balance +=  amount;
-    // }
+//     // updateBalance(amount){
+//     //     this.#balance +=  amount;
+//     // }
 
-    get balance(){
-        console.log(this.#balance);
-    }
+//     get balance(){
+//         console.log(this.#balance);
+//     }
 
-    set balance({amount , type}){
-        if(type  === "deposit"){
-            this.#balance += amount;
-        }else{
-            this.#balance -= amount;
-        }
+//     set balance({amount , type}){
+//         if(type  === "deposit"){
+//             this.#balance += amount;
+//         }else{
+//             this.#balance -= amount;
+//         }
         
-    }
-}
+//     }
+// }
 
-const a1 = new Account("Shubham",1000);
+// const a1 = new Account("Shubham",1000);
 
 // console.log(a1.)
 
@@ -183,6 +183,29 @@ const a1 = new Account("Shubham",1000);
 
 // getters , setters
 
-a1.balance;
-a1.balance = {amount : 1000 , type : "withdrawl"};
-a1.balance;  
+// a1.balance;
+// a1.balance = {amount : 1000 , type : "withdrawl"};
+// a1.balance;  
+
+// Static
+
+const date = new Date();
+
+Date.now();
+
+
+class Person{
+    constructor(firstName , lastName){
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
+
+    static greet(){
+        console.log("Hello , good morning");
+    }
+}
+
+const p1 = new Person("shubham","jain");
+
+Person.greet()
+p1.greet();
