@@ -1,5 +1,6 @@
 .image{
-    width: 80%;
+    width: 200px;
+    height: 200px;
 }
 
 *{
@@ -18,15 +19,16 @@ body{
     flex-direction: column;
     align-items: center;
     text-align: center;
+    gap: 10px;
 }
 
 .container{
-    /* display: grid;
+    display: grid;
     grid-template-columns: repeat(4 , 1fr);
-    gap: 20px; */
-    display: flex;
+    gap: 20px;
+    /* display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
     height: 100vh;
 }
 
@@ -44,6 +46,22 @@ button:active{
     
 }
 
-p{
+h1{
     font-size: 30px;
+}
+
+p , h1{
+    width: 200px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    
+}
+
+p{
+    -webkit-line-clamp: 3;
+}
+h1{
+    -webkit-line-clamp: 2;
 }
