@@ -6,6 +6,8 @@ import Home from "./Home"
 import Card from './Card'
 import Counter from './Counter'
 import Effect from './Effect'
+import Conditional from './Conditional'
+import Navbar from './Navbar'
 
 function App() {
   
@@ -46,6 +48,8 @@ function App() {
       } */}
       {/* <Counter /> */}
       <Effect />
+      {/* <Conditional /> */}
+      {/* <Navbar /> */}
     </div>
   )
 }
