@@ -65,3 +65,29 @@ p{
 h1{
     -webkit-line-clamp: 2;
 }
+
+.modal{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.507);
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-container{
+    width: 50%;
+    height: 60%;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 1px 1px 3px 0px #2b2b2b;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    align-items: center;
+}

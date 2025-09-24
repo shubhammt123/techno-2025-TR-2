@@ -7,6 +7,11 @@ const Effect = () => {
 
 
   const [data , setData] = useState([]);
+  const [open , setOpen] = useState(false);
+  const [selectProductId , setSelectedProductId] =  useState(null);
+  const [selectProduct , setSelectedProduct] = useState({});
+
+  console.log(selectProductId)
 
   const fetchData = async ()=>{
     try {
@@ -18,6 +23,21 @@ const Effect = () => {
     }
   }
 
+  const fetchDataById = async (id)=>{
+    try {
+      const  response = await fetch(`https://fakestoreapi.com/products/${id}`);
+      const data = await response.json();
+      setSelectedProduct(data);
+    } catch (error) {
+      console.log(error)
+    }
+  }
+
+  useEffect(()=>{
+    fetchDataById(selectProductId)
+  },[selectProductId]);
+
+  console.log(selectProduct)
 // useEffect(()=>{
 //   console.log(counter);
 //   console.log("Hello world");
@@ -47,12 +67,29 @@ useEffect(()=>{
       }}>Inc Number</button> */}
       {data.map((item)=>{
         return (
-          <Card title={item.title} description={item.description} image={item.image} />
+          <Card title={item.title} description={item.description} image={item.image} setOpen={setOpen} id={item.id} setSelectedProductId={setSelectedProductId} />
         )
       })}
       {/* <button onClick={()=>{setProductId(productId-1)}}>Dec Product Id</button>
       <p>Product Id : {productId}</p>
       <button onClick={()=>{setProductId(productId+1)}}>Inc Product Id</button> */}
+      {open && (
+        <div className="modal">
+        <div className="modal-container">
+          <div className="header">
+            <h1>Product</h1>
+            <button onClick={()=>{
+              setOpen(false);
+              setSelectedProduct({});
+              setSelectedProductId(null)
+          }}>X</button>
+          </div>
+        <div>
+          <img src={selectProduct.image} alt="" />
+        </div>
+        </div>
+      </div>
+      )}
     </>
   )
 }
