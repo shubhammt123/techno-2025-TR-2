@@ -8,6 +8,7 @@ import Counter from './Counter'
 import Effect from './Effect'
 import Conditional from './Conditional'
 import Navbar from './Navbar'
+import Login from './Login'
 
 function App() {
   
@@ -47,9 +48,10 @@ function App() {
         })
       } */}
       {/* <Counter /> */}
-      <Effect />
+      {/* <Effect /> */}
       {/* <Conditional /> */}
       {/* <Navbar /> */}
+      <Login />
     </div>
   )
 }
