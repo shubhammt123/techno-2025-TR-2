@@ -3,13 +3,17 @@ import React, { useState } from 'react'
 const Login = () => {
 
     const [isSignup , setIsSignup]  = useState(false);
-    const [formData , setFormData] =  useState({});
+    const [formData , setFormData] =  useState({
+       
+        email   : "",
+        password : "",
+    });
 
 
     const handleSubmit = (e)=>{
         e.preventDefault();
 
-        if(formData.password !== formData.confirmPassword){
+        if(isSignup && formData.password !== formData.confirmPassword){
             alert("Password and  confirm password should be same");
             return;
         }
@@ -28,15 +32,15 @@ const Login = () => {
 
         <form style={{display : "flex" , flexDirection : "column" , justifyContent : "center" , alignItems : "center" ,gap : "20px"}} onSubmit={handleSubmit}>
 
-          {isSignup &&   <input type="text" placeholder='User Name' name='userName' onChange={handleChange} />}
+          {isSignup &&   <input type="text" placeholder='User Name' name='userName' onChange={handleChange} value={formData.userName} />}
 
-            <input type="email" placeholder='Email' name='email' onChange={handleChange} />
+            <input type="email" placeholder='Email' name='email' onChange={handleChange} value={formData.email} />
 
-            <input type="password" placeholder='Password' name='password' onChange={handleChange} />
+            <input type="password" placeholder='Password' name='password' onChange={handleChange} value={formData.password} />
 
-           {isSignup &&  <input type="password" placeholder='Confirm Password' name='confirmPassword' onChange={handleChange} />}
+           {isSignup &&  <input type="password" placeholder='Confirm Password' name='confirmPassword' onChange={handleChange} value={formData.confirmPassword} />}
 
-            {isSignup && <input type="text" placeholder='Contact No' name='contactNo' onChange={handleChange} />}
+            {isSignup && <input type="text" placeholder='Contact No' name='contactNo' onChange={handleChange} value={formData.contactNo} />}
 
             <button>{isSignup ? "Signup" : "Login"}</button>
 
@@ -44,7 +48,23 @@ const Login = () => {
 
         <div style={{textAlign : "center" ,   color : "grey"}}>
             {isSignup ? "Already have an account?" : "Don't have an account?"} 
-            <span style={{color : "#3e6ed7de" , cursor : "pointer"}} onClick={()=>{setIsSignup(!isSignup)}}>{isSignup ? "Login" : "Signup"}
+            <span style={{color : "#3e6ed7de" , cursor : "pointer"}} onClick={()=>{setIsSignup(!isSignup);
+            if(!isSignup){
+                setFormData({
+                userName : "",
+                email : "",
+                password : "",
+                confirmPassword : "",
+                contactNo : ""
+            });
+            }else{
+                setFormData({
+                email : "",
+                password : "",
+            });
+            }
+            
+            }}>{isSignup ? "Login" : "Signup"}
             </span>
             </div>
     </div>
