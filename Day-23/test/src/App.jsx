@@ -9,6 +9,7 @@ import Effect from './Effect'
 import Conditional from './Conditional'
 import Navbar from './Navbar'
 import Login from './Login'
+import Router from './Router'
 
 function App() {
   
@@ -51,7 +52,9 @@ function App() {
       {/* <Effect /> */}
       {/* <Conditional /> */}
       {/* <Navbar /> */}
-      <Login />
+      {/* <Login /> */}
+      <Navbar />
+      <Router />
     </div>
   )
 }
