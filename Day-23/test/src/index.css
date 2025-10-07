@@ -93,8 +93,8 @@ h1{
 } */
 
 .container{
-    height: 100vh;
-    background-color: rgb(238, 238, 238);
+    /* height: 100vh;
+    background-color: rgb(238, 238, 238); */
     /* display: flex;
     justify-content: center;
     align-items: center; */
@@ -114,4 +114,34 @@ button{
     background-color: #3e6ed7de;
     color: white;
     font-weight: 600;
+}
+
+.container{
+        height: 100vh;
+          background-color: lightblue;
+}
+
+.container , .child1 , .child2 , .child3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.child1{
+    height: 80%;
+    width: 80%;
+    background-color: lightcoral;
+}
+
+.child2{
+    width: 80%;
+    height: 80%;
+    background-color: lightgoldenrodyellow;
+}
+
+.child3{
+    width: 80%;
+    height: 80%;
+    background-color: lightseagreen;
 }

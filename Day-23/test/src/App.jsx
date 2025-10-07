@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useContext, useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
@@ -10,8 +10,15 @@ import Conditional from './Conditional'
 import Navbar from './Navbar'
 import Login from './Login'
 import Router from './Router'
+import Child1 from './Child1'
+import CountContext from './context/CountContext'
 
 function App() {
+
+  // prop drilling
+
+  const {count , setCount} = useContext(CountContext)
+  console.log("App re-renders")
   
   // let data = [
   //   {
@@ -53,8 +60,20 @@ function App() {
       {/* <Conditional /> */}
       {/* <Navbar /> */}
       {/* <Login /> */}
-      <Navbar />
-      <Router />
+      {/* <Navbar /> */}
+      {/* <Router /> */}
+      App Component
+     <div  style={{display : "flex" ,justifyContent : "center" , alignItems : "center" , gap : "20px"}}> 
+      
+      <button onClick={()=>{
+        setCount(count+1)
+      }}>Inc Count</button>
+      <p>Count : {count}</p>
+      <button onClick={()=>{
+        setCount(count-1)
+      }}>Dec Count</button>
+      </div>
+      <Child1 />
     </div>
   )
 }
