@@ -1,14 +1,12 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { Outlet, useNavigate } from 'react-router-dom'
+import AuthContext from './context/AuthContext'
+import Navbar from './Navbar';
 
 const ProtectedRoute = ({allowedRole}) => {
-    const [auth , setAuth] = useState(false);
-    const [role , setRole] = useState(null);
 
-
-    console.log(allowedRole)
+    const {auth , role} = useContext(AuthContext);
     const navigate = useNavigate();
-
     useEffect(()=>{
         if(!auth){
         navigate("/auth/login")
@@ -21,7 +19,10 @@ const ProtectedRoute = ({allowedRole}) => {
     }
     },[]);
   return (
-    <div><Outlet /></div>
+    <div>
+      <Navbar />
+      <Outlet />
+      </div>
   )
 }
 

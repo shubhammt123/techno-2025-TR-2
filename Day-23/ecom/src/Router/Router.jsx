@@ -1,6 +1,6 @@
 import React from 'react'
 import { createBrowserRouter, Navigate } from 'react-router-dom'
-import Login from '../Login';
+import Login from '../unprotectedRoute/Login';
 import Home from '../Home';
 import About from '../About';
 import Parent from '../Parent';

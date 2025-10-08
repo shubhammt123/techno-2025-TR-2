@@ -1,10 +1,11 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { Outlet, useNavigate } from 'react-router-dom'
+import AuthContext from './context/AuthContext';
+import Navbar from './Navbar';
 
 const UnprotectedRoute = () => {
 
-    const [auth , setAuth] = useState(true);
-    const [role , setRole] = useState("SELLER");
+    const {auth , role} = useContext(AuthContext);
 
     const navigate = useNavigate();
 
@@ -12,10 +13,16 @@ const UnprotectedRoute = () => {
         if(auth){
         navigate("/")
     }
-    },[]);
+    },[auth]);
 
   return (
-    <div><Outlet /></div>
+    <div >
+      <Navbar />
+      <div className='container'>
+         <Outlet />
+      </div>
+     
+      </div>
   )
 }
 
