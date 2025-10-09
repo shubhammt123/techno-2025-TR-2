@@ -12,12 +12,13 @@ import Login from './Login'
 import Router from './Router'
 import Child1 from './Child1'
 import CountContext from './context/CountContext'
+import Account from './Account'
 
 function App() {
 
   // prop drilling
 
-  const {count , setCount} = useContext(CountContext)
+  // const {count , setCount} = useContext(CountContext)
   console.log("App re-renders")
   
   // let data = [
@@ -44,7 +45,7 @@ function App() {
   // ]
 
   return (
-    <div className='container'>
+    <div >
       {/* {
         data.map((item , index)=>{
           return (
@@ -63,7 +64,7 @@ function App() {
       {/* <Navbar /> */}
       {/* <Router /> */}
       App Component
-     <div  style={{display : "flex" ,justifyContent : "center" , alignItems : "center" , gap : "20px"}}> 
+     {/* <div  style={{display : "flex" ,justifyContent : "center" , alignItems : "center" , gap : "20px"}}> 
       
       <button onClick={()=>{
         setCount(count+1)
@@ -72,8 +73,9 @@ function App() {
       <button onClick={()=>{
         setCount(count-1)
       }}>Dec Count</button>
-      </div>
-      <Child1 />
+      </div> */}
+      {/* <Child1 /> */}
+      <Account />
     </div>
   )
 }
