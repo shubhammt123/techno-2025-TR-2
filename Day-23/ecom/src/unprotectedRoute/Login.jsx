@@ -1,7 +1,8 @@
 import React, { useContext, useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 import AuthContext from '../context/AuthContext';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { login } from '../redux/slices/authSlice';
 
 const Login = () => {
     const [formData , setFormData] =  useState({
@@ -10,17 +11,14 @@ const Login = () => {
     });
 
     const {auth ,role } = useSelector((state)=>state.auth);
-
-    console.log(auth)
-    console.log(role)
     const navigate = useNavigate();
+    const dispatch = useDispatch();
 
     const handleSubmit = (e)=>{
         e.preventDefault();
         console.log(formData);
         const role = prompt("Enter role");
-        setAuth(true);
-        setRole(role);
+        dispatch(login(role));
         localStorage.setItem("auth",true);
         localStorage.setItem("role",role);
     }

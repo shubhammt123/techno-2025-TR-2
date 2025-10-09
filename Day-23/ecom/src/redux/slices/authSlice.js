@@ -3,12 +3,18 @@ import { createSlice } from "@reduxjs/toolkit";
 const authSlice = createSlice({
     name : "auth",
     initialState : {
-        auth : false,
-        role : null
+        auth : localStorage.getItem("auth") ? true : false,
+        role : localStorage.getItem("role") ? localStorage.getItem("role") : null
     },
     reducers : {
-        login : ()=>{},
-        logout : ()=>{}
+        login : (state,action)=>{
+            state.auth = true;
+            state.role = action.payload;
+        },
+        logout : (state,action)=>{
+            state.auth = false;
+            state.role = null;
+        }
     }
 })
 
