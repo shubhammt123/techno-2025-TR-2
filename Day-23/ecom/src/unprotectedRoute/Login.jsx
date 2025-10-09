@@ -20,6 +20,8 @@ const Login = () => {
         const role = prompt("Enter role");
         setAuth(true);
         setRole(role);
+        localStorage.setItem("auth",true);
+        localStorage.setItem("role",role);
     }
 
     const handleChange = (e)=>{
