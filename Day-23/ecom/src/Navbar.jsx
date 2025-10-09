@@ -1,10 +1,11 @@
 import React, { useContext } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import AuthContext from './context/AuthContext'
+import { useSelector } from 'react-redux'
 
 const Navbar = () => {
 
-    const {auth , setAuth , role , setRole} = useContext(AuthContext);
+   const {auth , role} = useSelector((state)=>state.auth);
 
     const navigate = useNavigate();
 

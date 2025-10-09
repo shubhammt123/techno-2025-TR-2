@@ -1,6 +1,7 @@
 import React, { useContext, useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 import AuthContext from '../context/AuthContext';
+import { useSelector } from 'react-redux';
 
 const Login = () => {
     const [formData , setFormData] =  useState({
@@ -8,7 +9,7 @@ const Login = () => {
       password : ""
     });
 
-    const {auth ,setAuth,role , setRole} = useContext(AuthContext);
+    const {auth ,role } = useSelector((state)=>state.auth);
 
     console.log(auth)
     console.log(role)
