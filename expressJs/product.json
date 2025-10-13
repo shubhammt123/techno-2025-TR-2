@@ -1,0 +1,14 @@
+[
+  {
+    "productName": "Iphone 16",
+    "description": "This is 16 series of apple",
+    "price": 100000,
+    "category": "smartphone"
+  },
+  {
+    "productName": "Samsung",
+    "description": "This is samsung phone",
+    "price": 100000,
+    "category": "smartphone"
+  }
+]
