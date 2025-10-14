@@ -55,9 +55,24 @@ app.post("/createProduct",(req,res)=>{
     res.send({message : "Product Created"});
 });
 // http://localhost:3000/createProduct
-app.put("/updateProduct",(req,res)=>{});
+app.put("/updateProduct/:id",(req,res)=>{
+    const {id} = req.params;
+    const productData = readData();
+    const index = productData.findIndex((item)=>item.id===+id);
+    console.log(index);
+    if(index===-1) return res.status(404).send({message : "Product Not Found"});
+    const updatedProduct = {...productData[index],...req.body};
+    productData[index] = updatedProduct;
+    fs.writeFileSync("product.json",JSON.stringify(productData,null,2));
+    res.status(202).send({message : "Product Updated" , product : updatedProduct});
+});
 //http://localhost:3000/updateProduct
-app.delete("/deleteProduct",(req,res)=>{});
+app.delete("/deleteProduct/:id",(req,res)=>{
+    const productData = readData();
+    const filteredData = productData.filter((item)=>item.id !== +req.params.id);
+    fs.writeFileSync("product.json",JSON.stringify(filteredData,null,2));
+    res.status(200).send({message : "Product Deleted"});
+});
 // http://localhost:3000/deleteProduct
 
 
