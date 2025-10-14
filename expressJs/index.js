@@ -23,13 +23,24 @@ app.use(express.json());
 // http://ipaddress:port/routes
 // http://localhost:3000/
 
-app.get("/getAllProduct",(req,res)=>{
+const readData = ()=>{
     const productData = JSON.parse(fs.readFileSync("product.json","utf-8"));
+    return productData;
+}
+
+app.get("/getAllProduct",(req,res)=>{
+    const productData = readData();
     res.send({message : "Product Fetched" , products : productData});
 }); 
 //http://localhost:3000/getAllProduct
-app.get("/getProductById",(req,res)=>{}); 
-// http://localhost:3000/getProductById
+app.get("/getProductById/:id",(req,res)=>{
+    const {id} = req.params;
+    const productData = readData();
+    const product = productData.find((item)=>item.id===+id);
+    if(!product) return res.status(404).send({message : "Product Not Found"});
+    res.status(200).send({message : "Product Fetched" , product : product});
+}); 
+// http://localhost:3000/getProductById/
 app.post("/createProduct",(req,res)=>{
     // query - optional
     // params - mandatory
@@ -37,8 +48,9 @@ app.post("/createProduct",(req,res)=>{
 
     //[{},{}]
     const reqBody = req.body;
-    const productData = JSON.parse(fs.readFileSync("product.json","utf-8"));
-    productData.push(req.body);
+    const productData = readData();
+    reqBody.id = Date.now();
+    productData.push(reqBody);
     fs.writeFileSync("product.json",JSON.stringify(productData , null , 2));
     res.send({message : "Product Created"});
 });
