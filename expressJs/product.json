@@ -61,12 +61,5 @@
     "price": 7655454,
     "category": "smartphone",
     "id": 1760414750826
-  },
-  {
-    "productName": "Google",
-    "description": "This is Pixel series of google",
-    "price": 100000,
-    "category": "smartphone",
-    "id": 1760414751703
   }
 ]
