@@ -5,6 +5,8 @@ import Vector from "./assets/icon.png";
 
 export default function App() {
   const [count ,  setCount] = useState(0);
+  const [buttonBackgroundColor , setButtonBackgroundColor] = useState("white");
+  const [buttonTextColor , setButtonTextColor] = useState("orange")
   return (
     <>
     <View style={styles.container}>
@@ -17,6 +19,20 @@ export default function App() {
           Canon 1200D
         </Text>
       </View>
+      </Pressable>
+
+      <Pressable style={{marginTop : 20}} onPressIn={()=>{
+        setButtonBackgroundColor("orange");
+        setButtonTextColor("white")
+      }} onPressOut={()=>{
+        setButtonBackgroundColor("white");
+        setButtonTextColor("orange")
+      }}>
+        <View style={{padding : 10 , borderWidth : 2 , borderColor : "orange" , backgroundColor : buttonBackgroundColor}}>
+          <Text style={{color : buttonTextColor , fontSize : 30}}>
+            Click Me
+          </Text>
+        </View>
       </Pressable>
 
     </View>
