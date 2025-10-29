@@ -2,14 +2,15 @@ import { StatusBar } from 'expo-status-bar';
 import { useState } from 'react';
 import { Button, Image, Pressable, StyleSheet, Text, View } from 'react-native';
 import Vector from "./assets/icon.png";
+import Home from './Home';
 
 export default function App() {
   const [count ,  setCount] = useState(0);
   const [buttonBackgroundColor , setButtonBackgroundColor] = useState("white");
   const [buttonTextColor , setButtonTextColor] = useState("orange")
   return (
-    <>
-    <View style={styles.container}>
+    <View style={{justifyContent  : "center" , alignItems : "center" , flex :1}}>
+    {/* <View style={styles.container}>
       <Pressable onPress={()=>{console.log("Card Clicked")}} onLongPress={()=>{
         console.log("Long press event called");
       }}>
@@ -35,8 +36,9 @@ export default function App() {
         </View>
       </Pressable>
 
+    </View> */}
+    <Home />
     </View>
-    </>
   );
 }
 
@@ -58,7 +60,6 @@ const styles = StyleSheet.create({
     // elevation : 20
     padding : 50,
     alignItems : "center",
-    flex : 1,
   },
   para :  {
     fontSize : 40,
