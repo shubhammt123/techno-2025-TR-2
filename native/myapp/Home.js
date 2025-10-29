@@ -1,28 +1,28 @@
-import { Alert, Button, Modal, StyleSheet, Text, View } from 'react-native'
+import { ActivityIndicator, Alert, Button, Modal, StatusBar, StyleSheet, Text, View } from 'react-native'
 import React, { useState } from 'react'
 
 const Home = () => {
     const [visible , setVisible] = useState(false);
-    const showAlert = ()=>{
-        Alert.alert(
-            "Hello",
-            "This is the demo message",
-            [
-                {
-                text : "ok" ,
-                onPress : ()=>{
-                    console.log("Ok button pressed")
-                }
-            },
-            {
-                text : "cancel",
-                onPress : ()=>{
-                    console.log("Cancel pressed")
-                }
-            }
-        ]
-        )
-    }
+    // const showAlert = ()=>{
+    //     Alert.alert(
+    //         "Hello",
+    //         "This is the demo message",
+    //         [
+    //             {
+    //             text : "ok" ,
+    //             onPress : ()=>{
+    //                 console.log("Ok button pressed")
+    //             }
+    //         },
+    //         {
+    //             text : "cancel",
+    //             onPress : ()=>{
+    //                 console.log("Cancel pressed")
+    //             }
+    //         }
+    //     ]
+    //     )
+    // }
   return (
     <View>
         {/* <Button title="Open Model" onPress={()=>{setVisible(true)}} />
@@ -37,8 +37,12 @@ const Home = () => {
             <Button title='Close Model' onPress={()=>{setVisible(false)}} />
         </View>
       </Modal> */}
-      <Button title="Open Alert" onPress={showAlert} />
-
+      {/* <Button title="Open Alert" onPress={showAlert} /> */}
+      {/* <ActivityIndicator size="large" /> */}
+      {/* <StatusBar backgroundColor="lightgreen" barStyle="light-content" /> */}
+      <Text style={styles.para}>
+        Hello , My Name is shubham
+      </Text>
     </View>
   )
 }

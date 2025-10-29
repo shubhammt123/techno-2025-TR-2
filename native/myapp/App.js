@@ -1,15 +1,19 @@
 import { StatusBar } from 'expo-status-bar';
 import { useState } from 'react';
-import { Button, Image, Pressable, StyleSheet, Text, View } from 'react-native';
+import { Button, Image, Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
 import Vector from "./assets/icon.png";
 import Home from './Home';
+import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
 
 export default function App() {
   const [count ,  setCount] = useState(0);
   const [buttonBackgroundColor , setButtonBackgroundColor] = useState("white");
   const [buttonTextColor , setButtonTextColor] = useState("orange")
   return (
-    <View style={{justifyContent  : "center" , alignItems : "center" , flex :1}}>
+    <SafeAreaProvider>
+      <SafeAreaView>
+    <ScrollView horizontal={true}>
+      <View style={{flexDirection : "row"}}>
     {/* <View style={styles.container}>
       <Pressable onPress={()=>{console.log("Card Clicked")}} onLongPress={()=>{
         console.log("Long press event called");
@@ -37,8 +41,14 @@ export default function App() {
       </Pressable>
 
     </View> */}
-    <Home />
+    <View style={{height : 400 , width  :   400 , backgroundColor : "blue"}}>
     </View>
+    <View style={{height : 400 , width  :   400 , backgroundColor : "yellow"}}>
+    </View>
+    </View>
+    </ScrollView>
+    </SafeAreaView>
+    </SafeAreaProvider>
   );
 }
 
