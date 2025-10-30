@@ -5,6 +5,7 @@ import Vector from "./assets/icon.png";
 import Home from './Home';
 import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
 import Product from './Product';
+import Form from './Form';
 
 export default function App() {
   const [count ,  setCount] = useState(0);
@@ -47,7 +48,8 @@ export default function App() {
     <View style={{height : 400 , width  :   400 , backgroundColor : "yellow"}}>
     </View> */}
     </View>
-    <Product />
+    {/* <Product /> */}
+    <Form />
     </SafeAreaView>
     </SafeAreaProvider>
   );
