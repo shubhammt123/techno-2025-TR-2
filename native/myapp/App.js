@@ -4,6 +4,7 @@ import { Button, Image, Pressable, ScrollView, StyleSheet, Text, View } from 're
 import Vector from "./assets/icon.png";
 import Home from './Home';
 import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
+import Product from './Product';
 
 export default function App() {
   const [count ,  setCount] = useState(0);
@@ -12,8 +13,8 @@ export default function App() {
   return (
     <SafeAreaProvider>
       <SafeAreaView>
-    <ScrollView horizontal={true}>
-      <View style={{flexDirection : "row"}}>
+    
+      <View>
     {/* <View style={styles.container}>
       <Pressable onPress={()=>{console.log("Card Clicked")}} onLongPress={()=>{
         console.log("Long press event called");
@@ -41,12 +42,12 @@ export default function App() {
       </Pressable>
 
     </View> */}
-    <View style={{height : 400 , width  :   400 , backgroundColor : "blue"}}>
+    {/* <View style={{height : 400 , width  :   400 , backgroundColor : "blue"}}>
     </View>
     <View style={{height : 400 , width  :   400 , backgroundColor : "yellow"}}>
+    </View> */}
     </View>
-    </View>
-    </ScrollView>
+    <Product />
     </SafeAreaView>
     </SafeAreaProvider>
   );
