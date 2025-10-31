@@ -1,10 +1,14 @@
 import { StyleSheet, Text, View } from 'react-native'
 import StackNavigation from './StackNavigation';
+import { NavigationContainer } from '@react-navigation/native';
+import TabNavigation from './TabNavigation';
 
 const App = () => {
   return (
     <View  style={{flex : 1 }}>
-      <StackNavigation />
+      <NavigationContainer>
+      <TabNavigation />
+      </NavigationContainer>
     </View>
   )
 }
