@@ -7,8 +7,6 @@ const Form = () => {
     const onChange = (name , value)=>{
         setFormData({...formData  ,[name] : value})
     }
-
-    console.log(formData)
   return (
     <View>
         
